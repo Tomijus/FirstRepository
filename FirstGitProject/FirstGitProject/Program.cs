@@ -17,6 +17,11 @@ namespace FirstGitProject
             Console.WriteLine(IsPrimal(5));
             Console.WriteLine(IsPrimal(3));
             Console.WriteLine(IsPrimal(4));
+
+            for (int i = 0; i < 50; i++)
+            {
+                Console.WriteLine(D20());
+            }
         }
 
         static int Max(int a, int b, int c)
@@ -56,5 +61,11 @@ namespace FirstGitProject
             }
             return answer;
         }
+        static int D20()
+        {
+            Random random = new Random();
+            return random.Next(0, 20) + 1;
+        }
+
     }
 }
