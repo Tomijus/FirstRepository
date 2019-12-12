@@ -6,22 +6,22 @@ namespace FirstGitProject
     {
         static void Main()
         {
-            Max(10, 6, 15);
+            Console.WriteLine(Max(10, 6, 15));
         }
 
-        static void Max(int a, int b, int c)
+        static int Max(int a, int b, int c)
         {
             if (a>b && a>c)
             {
-                Console.WriteLine($"Didziausias yra {a}");
+                return a;
             }
-            else if (b>a && b>c)
+            else if (b>c)
             {
-                Console.WriteLine($"Didziausias yra {b}");
+                return b;
             }
             else
             {
-                Console.WriteLine($"Didziausias yra {c}");
+                return c;
             }
         }
     }
