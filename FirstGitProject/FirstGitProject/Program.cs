@@ -6,11 +6,17 @@ namespace FirstGitProject
     {
         static void Main()
         {
+            /*
             Console.WriteLine(Max(10, 6, 15));
+
             Console.WriteLine(TestNumberInRange(5, 0, 10));
             Console.WriteLine(TestNumberInRange(-5, 0, 10));
             Console.WriteLine(TestNumberInRange(5, 10, 0));
             Console.WriteLine(TestNumberInRange(5, -5, 10));
+            */
+            Console.WriteLine(IsPrimal(5));
+            Console.WriteLine(IsPrimal(3));
+            Console.WriteLine(IsPrimal(4));
         }
 
         static int Max(int a, int b, int c)
@@ -35,6 +41,20 @@ namespace FirstGitProject
                 Console.WriteLine("Error. Bad range values.");
             }
             return testNumber >= minValue && testNumber <= maxValue;
+        }
+
+        static bool IsPrimal(int a)
+        {
+            bool answer = true;
+            for (int i = 2; i < a; i++)
+            {
+                if (a%i==0)
+                {
+                    answer = false;
+                    break;
+                }
+            }
+            return answer;
         }
     }
 }
